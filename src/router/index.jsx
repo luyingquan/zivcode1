@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from '../views/home'
 import Login from '../views/login'
 import Products from '../views/products'
@@ -9,9 +9,9 @@ import EmailValidator from '../views/email-validator'
 import SupplierManagement from '../views/supplier-management'
 import Profile from '../views/profile'
 
-export default function Router() {
+export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -22,6 +22,6 @@ export default function Router() {
         <Route path="/supplier" element={<SupplierManagement />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
